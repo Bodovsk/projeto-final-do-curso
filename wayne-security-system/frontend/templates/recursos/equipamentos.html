@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <div class="page-header">
+        <h1><i class="fas fa-tools"></i> Inventário de Equipamentos</h1>
+        <a href="{{ url_for('adicionar_equipamento') }}" class="add-button">
+            <i class="fas fa-plus"></i> Adicionar Equipamento
+        </a>
+    </div>
+    
+    <div class="equipment-grid">
+        <!-- Equipamento 1 -->
+        <div class="equipment-card">
+            <h3><i class="fas fa-robot"></i> Batsuit</h3>
+            <p><i class="fas fa-id-card"></i> <strong>ID:</strong> EQ-001</p>
+            <p><i class="fas fa-cube"></i> <strong>Tipo:</strong> Vestimenta</p>
+            <p><i class="fas fa-map-marker-alt"></i> <strong>Localização:</strong> Batcaverna</p>
+            <p><i class="fas fa-circle" style="color: #4CAF50;"></i> <strong>Status:</strong> Operacional</p>
+        </div>
+        
+        <!-- Equipamento 2 -->
+        <div class="equipment-card">
+            <h3><i class="fas fa-bolt"></i> Bat-grappling</h3>
+            <p><i class="fas fa-id-card"></i> <strong>ID:</strong> EQ-002</p>
+            <p><i class="fas fa-cube"></i> <strong>Tipo:</strong> Ferramenta</p>
+            <p><i class="fas fa-map-marker-alt"></i> <strong>Localização:</strong> Em campo</p>
+            <p><i class="fas fa-circle" style="color: #FFC107;"></i> <strong>Status:</strong> Manutenção</p>
+        </div>
+        
+        <!-- Equipamento 3 -->
+        <div class="equipment-card">
+            <h3><i class="fas fa-shield-alt"></i> Escudo Energético</h3>
+            <p><i class="fas fa-id-card"></i> <strong>ID:</strong> EQ-003</p>
+            <p><i class="fas fa-cube"></i> <strong>Tipo:</strong> Defesa</p>
+            <p><i class="fas fa-map-marker-alt"></i> <strong>Localização:</strong> Arsenal</p>
+            <p><i class="fas fa-circle" style="color: #4CAF50;"></i> <strong>Status:</strong> Operacional</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

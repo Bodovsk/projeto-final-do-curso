@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestão de Equipamentos</title>
+    <style>
+        body {
+            background-color: #0d0d1a;
+            color: #fff;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 50px;
+        }
+        .card {
+            background-color: #1a1a2e;
+            border: 2px solid #ffc107;
+            border-radius: 10px;
+            padding: 20px;
+            width: 220px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(255, 193, 7, 0.4);
+        }
+        .card h3 {
+            margin-bottom: 10px;
+            color: #ffc107;
+        }
+        .card a {
+            text-decoration: none;
+        }
+        .card button {
+            background-color: #ffc107;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align:center;">Central de Equipamentos</h1>
+    <div class="container">
+        <div class="card">
+            <h3>Equipamentos</h3>
+            <p>Gerencie os equipamentos da Wayne Enterprises.</p>
+            <a href="{{ url_for('equipamentos') }}"><button>Acessar</button></a>
+        </div>
+        <div class="card">
+            <h3>Dispositivos</h3>
+            <p>Monitore os dispositivos de segurança.</p>
+            <a href="{{ url_for('dispositivos') }}"><button>Acessar</button></a>
+        </div>
+        <div class="card">
+            <h3>Veículos</h3>
+            <p>Controle e mantenha a frota de veículos.</p>
+            <a href="{{ url_for('veículos') }}"><button>Acessar</button></a>
+        </div>
+    </div>
+</body>
+</html>

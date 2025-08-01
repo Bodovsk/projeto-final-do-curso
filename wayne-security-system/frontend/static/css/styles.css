@@ -1,0 +1,30 @@
+.quick-access-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.quick-access-list li {
+    margin-bottom: 10px;
+}
+
+.quick-access-list a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: all 0.3s;
+}
+
+.quick-access-list a:hover {
+    background-color: #2d2d4d;
+    color: #f0c808;
+}
+
+.quick-access-list a i {
+    width: 20px;
+    text-align: center;
+}

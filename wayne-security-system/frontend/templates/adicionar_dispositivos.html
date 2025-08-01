@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <h1><i class="fas fa-plus-circle"></i> Adicionar Novo Dispositivo</h1>
+    
+    <form method="POST" class="bat-form">
+        <div class="form-group">
+            <label for="nome">Nome do Dispositivo</label>
+            <input type="text" id="nome" name="nome" required class="bat-input">
+        </div>
+        
+        <div class="form-group">
+            <label for="tipo">Tipo</label>
+            <select id="tipo" name="tipo" class="bat-input">
+                <option value="Vigilância">Vigilância</option>
+                <option value="Comunicação">Comunicação</option>
+                <option value="Análise">Análise</option>
+                <option value="Defesa">Defesa</option>
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label for="localizacao">Localização</label>
+            <input type="text" id="localizacao" name="localizacao" required class="bat-input">
+        </div>
+        
+        <button type="submit" class="bat-btn">
+            <i class="fas fa-save"></i> Cadastrar Dispositivo
+        </button>
+    </form>
+</div>
+{% endblock %}

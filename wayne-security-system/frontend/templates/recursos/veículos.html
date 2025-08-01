@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <div class="page-header">
+        <h1><i class="fas fa-car"></i> Frota de Veículos</h1>
+        <a href="{{ url_for('adicionar_veiculo') }}" class="add-button">
+            <i class="fas fa-plus"></i> Adicionar Veículo
+        </a>
+    </div>
+    
+    <div class="vehicle-grid">
+        <!-- Veículo 1 -->
+        <div class="vehicle-card">
+            <h3><i class="fas fa-bat"></i> Batmóvel</h3>
+            <p><i class="fas fa-id-card"></i> <strong>ID:</strong> BAT-001</p>
+            <p><i class="fas fa-barcode"></i> <strong>Placa:</strong> BAT2023</p>
+            <p><i class="fas fa-map-marker-alt"></i> <strong>Localização:</strong> Batcaverna</p>
+            <p><i class="fas fa-circle" style="color: #4CAF50;"></i> <strong>Status:</strong> Disponível</p>
+        </div>
+        
+        <!-- Veículo 2 -->
+        <div class="vehicle-card">
+            <h3><i class="fas fa-motorcycle"></i> Batmotocicleta</h3>
+            <p><i class="fas fa-id-card"></i> <strong>ID:</strong> BAT-002</p>
+            <p><i class="fas fa-barcode"></i> <strong>Placa:</strong> BAT2022</p>
+            <p><i class="fas fa-map-marker-alt"></i> <strong>Localização:</strong> Em missão</p>
+            <p><i class="fas fa-circle" style="color: #FFC107;"></i> <strong>Status:</strong> Em uso</p>
+        </div>
+        
+        <!-- Veículo 3 -->
+        <div class="vehicle-card">
+            <h3><i class="fas fa-helicopter"></i> Batwing</h3>
+            <p><i class="fas fa-id-card"></i> <strong>ID:</strong> BAT-003</p>
+            <p><i class="fas fa-barcode"></i> <strong>Serial:</strong> WING-01</p>
+            <p><i class="fas fa-map-marker-alt"></i> <strong>Localização:</strong> Hangar secreto</p>
+            <p><i class="fas fa-circle" style="color: #4CAF50;"></i> <strong>Status:</strong> Disponível</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

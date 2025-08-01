@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <h1><i class="fas fa-plus-circle"></i> Adicionar Novo Veículo</h1>
+    
+    <form method="POST" class="bat-form">
+        <div class="form-group">
+            <label for="nome">Nome do Veículo</label>
+            <input type="text" id="nome" name="nome" required class="bat-input">
+        </div>
+        
+        <div class="form-group">
+            <label for="tipo">Tipo</label>
+            <select id="tipo" name="tipo" class="bat-input">
+                <option value="Terrestre">Terrestre</option>
+                <option value="Aéreo">Aéreo</option>
+                <option value="Aquático">Aquático</option>
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label for="identificacao">Identificação (Placa/Serial)</label>
+            <input type="text" id="identificacao" name="identificacao" required class="bat-input">
+        </div>
+        
+        <button type="submit" class="bat-btn">
+            <i class="fas fa-save"></i> Cadastrar Veículo
+        </button>
+    </form>
+</div>
+{% endblock %}

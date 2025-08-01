@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Wayne Enterprises{% endblock %}</title>
+    <style>
+        /* Estilos básicos */
+        :root {
+            --wayne-blue: #0a1a2a;
+            --wayne-gold: #c0a062;
+            --wayne-dark: #050d16;
+            --wayne-light: #e0e0e0;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--wayne-blue);
+            color: var(--wayne-light);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        h1 {
+            color: var(--wayne-gold);
+            border-bottom: 2px solid var(--wayne-gold);
+            padding-bottom: 10px;
+        }
+        
+        /* Mensagens flash */
+        .flash-message {
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+        }
+        
+        .flash-erro {
+            background-color: #ffebee;
+            color: #c62828;
+        }
+        
+        .flash-sucesso {
+            background-color: #e8f5e9;
+            color: #2e7d32;
+        }
+    </style>
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+    <div class="container">
+        <!-- Mensagens flash -->
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="flash-message flash-{{ category }}">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+        
+        <!-- Conteúdo principal -->
+        {% block content %}{% endblock %}
+    </div>
+
+    {% block extra_js %}{% endblock %}
+</body>
+</html>
